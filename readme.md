@@ -19,7 +19,7 @@ Simple CRUD applicatiion using Springboot with JPA. This application uses SQL ba
 ## Application Structure
 
 ## Running the server locally
-The BankOfSpring application can be started using your favourite IDE and its run configuration support. If you are a terminal savvy, please use the following command -
+The BookLibrary application can be started using your favourite IDE and its run configuration support or terminal using the following command -
 
 ````
 mvn spring-boot:run
@@ -28,7 +28,7 @@ java -jar target/xxx.jar
 ````
 
 ## Docker
-BankOfSpring supports docker container out of the box. This boilerplate is meant to cater to both web based applications as well as scalable micro services written in Java. Please select one of the following two ways to use docker to build and run the application -
+BookLibrary supports docker container out of the box. This boilerplate is meant to cater to both web based applications as well as scalable micro services written in Java. Please select one of the following two ways to use docker to build and run the application -
 
 **Dockerfile**
 
@@ -53,7 +53,7 @@ docker-compose up
 ````
 
 ## Swagger Documentation
-Swagger documentation is in-built in this starter-kit and can be accessed at the following URL -
+Swagger documentation is enabled and can be accessed at the following URL -
 ````
 http://<host-name>:8080/swagger-ui.html
 ````
