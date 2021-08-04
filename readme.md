@@ -1,8 +1,8 @@
 ## Book Library
-Maven based book library application.
+Maven based Springboot application.
 
 ## Description
-Simple CRUD applicatiion using Springboot with JPA. This application uses SQL based DB engine for persistence (H2 has been used as an example with this project), feel free to change the SQL-based db as necessary. Micrometer-registry-prometheus is enabled so you can connect prometheus/grafana to scrap metrics from the actuator.
+Simple CRUD application using Springboot with JPA. This application uses SQL based DB engine for persistence (H2 has been used as an example with this project), feel free to change the SQL-based db as necessary. Micrometer-registry-prometheus is enabled so you can connect prometheus/grafana to scrap metrics from the actuator.
 
 ## Technology
 
