@@ -2,6 +2,7 @@ package com.booklibrary.domain.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import lombok.experimental.Accessors;
 
 import javax.persistence.*;
@@ -10,6 +11,7 @@ import javax.persistence.*;
 @Setter
 @Accessors(chain = true)
 @Entity
+@ToString
 public class Book extends BaseDomainObject {
 
     @Id
@@ -43,18 +45,5 @@ public class Book extends BaseDomainObject {
 
     @Column(unique = true)
     private String isbn;
-
-    @Override
-    public String toString() {
-        StringBuffer s = new StringBuffer("book: ");
-        s.append("bookId:" + bookId);
-        s.append("author:" + author + ",");
-        s.append("description:" + description + ",");
-        s.append("rating:" + rating + ",");
-        s.append("publisher:" + publisher + ",");
-        s.append("pageCount:" + pageCount + ",");
-        s.append("isbn:" + isbn);
-        return s.toString();
-    }
 
 }
