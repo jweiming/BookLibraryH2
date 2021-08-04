@@ -1,0 +1,6 @@
+INSERT INTO book VALUES (1, '2021-08-04 11:53:15.851', '2021-08-04 11:53:15.851', 'E. J. W. Barber','The Mummies of Urumchi','0393045218', null, 'W. W. Norton &amp; Company', null, 'The Mummies of Urumchi');
+INSERT INTO book VALUES (2, '2021-08-04 11:53:15.851', '2021-08-04 11:53:15.851', 'Amy Tan','The Kitchen Gods Wife','0399135782', null, 'Putnam Pub Group', null, 'The Kitchen Gods Wife');
+INSERT INTO book VALUES (3, '2021-08-04 11:53:15.851', '2021-08-04 11:53:15.851', 'David Adams Richards','Nights Below Station Street','0771074670', null, 'Emblem Editions', null, 'Nights Below Station Street');
+INSERT INTO book VALUES (4, '2021-08-04 11:53:15.851', '2021-08-04 11:53:15.851', 'Sheila Heti','The Middle Stories','0887841740', null, 'House of Anansi Press', null, 'The Middle Stories');
+INSERT INTO book VALUES (5, '2021-08-04 11:53:15.851', '2021-08-04 11:53:15.851', 'R. J. Kaiser','Jane Doe','1552041778', null, 'Mira Books', null, 'Jane Doe');
+INSERT INTO book VALUES (6, '2021-08-04 11:53:15.851', '2021-08-04 11:53:15.851', 'John Grisham','The Testament','0440234743', null, 'Dell', null, 'The Testament');
