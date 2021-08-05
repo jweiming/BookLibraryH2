@@ -4,7 +4,6 @@ package com.booklibrary.exception.handler;
 import com.booklibrary.exception.ApiError;
 import com.booklibrary.exception.DuplicateEntityException;
 import com.booklibrary.exception.EntityNotFoundException;
-import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -173,10 +172,10 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     /**
      * Handle javax.persistence.EntityNotFoundException
      */
-    @ExceptionHandler(javax.persistence.EntityNotFoundException.class)
-    protected ResponseEntity<Object> handleEntityNotFound(javax.persistence.EntityNotFoundException ex) {
-        return buildResponseEntity(new ApiError(HttpStatus.NOT_FOUND, ex));
-    }
+//    @ExceptionHandler(javax.persistence.EntityNotFoundException.class)
+//    protected ResponseEntity<Object> handleEntityNotFound(javax.persistence.EntityNotFoundException ex) {
+//        return buildResponseEntity(new ApiError(HttpStatus.NOT_FOUND, ex));
+//    }
 
     /**
      * Handle DataIntegrityViolationException, inspects the cause for different DB causes.
@@ -187,9 +186,6 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(DataIntegrityViolationException.class)
     protected ResponseEntity<Object> handleDataIntegrityViolation(DataIntegrityViolationException ex,
                                                                   WebRequest request) {
-        if (ex.getCause() instanceof ConstraintViolationException) {
-            return buildResponseEntity(new ApiError(HttpStatus.CONFLICT, "Database error", ex.getCause()));
-        }
         return buildResponseEntity(new ApiError(HttpStatus.INTERNAL_SERVER_ERROR, ex));
     }
 

@@ -7,8 +7,7 @@ import com.booklibrary.exception.EntityNotFoundException;
 
 import java.util.List;
 
-/**
- * Created by Joseph
+/*
  * Basic CRUD functionality
  */
 public interface BookService {
@@ -16,9 +15,9 @@ public interface BookService {
 
     Book updateBook (BookDto bookDto) throws EntityException;
 
-    Book getBook(Long bookId) throws EntityNotFoundException;
+    Book getBook(String bookId) throws EntityNotFoundException;
 
-    void deleteBook(Long bookId) throws EntityNotFoundException;
+    void deleteBook(String bookId) throws EntityNotFoundException;
 
     List<Book> getAllBooks();
 }

@@ -16,7 +16,7 @@ import lombok.experimental.Accessors;
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class BookDto {
-    private Long bookId;
+    private String bookId;
     private String author;
     private String title;
     private String description;

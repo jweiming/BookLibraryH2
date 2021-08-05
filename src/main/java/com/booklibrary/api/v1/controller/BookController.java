@@ -39,7 +39,7 @@ public class BookController {
     }
 
     @GetMapping(value = "/{id}")
-    public BookDto getBookById(@PathVariable("id") Long bookId) throws EntityNotFoundException {
+    public BookDto getBookById(@PathVariable("id") String bookId) throws EntityNotFoundException {
         Book book = bookService.getBook(bookId);
         if (book != null) {
             return modelMapper.map(book, BookDto.class);
@@ -68,7 +68,7 @@ public class BookController {
     }
 
     @DeleteMapping(value = "/{id}")
-    public void deleteBook(@PathVariable("id") Long bookId) throws EntityNotFoundException {
+    public void deleteBook(@PathVariable("id") String bookId) throws EntityNotFoundException {
         Book book = bookService.getBook(bookId);
         if (book != null) {
             bookService.deleteBook(bookId);

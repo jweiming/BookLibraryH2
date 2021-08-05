@@ -1,49 +1,31 @@
 package com.booklibrary.domain.model;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 import lombok.experimental.Accessors;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.*;
-
-@Getter
-@Setter
+@Document
+@Data
 @Accessors(chain = true)
-@Entity
-@ToString
 public class Book extends BaseDomainObject {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long bookId;
+    private String bookId;
 
-    /*
-    * purposely omitted price to keep things simple
-    * Reason being that introduces some complexity handling
-    * - with accuracy issues (like using BigDecimal vs Float/double)
-    * - and different currency types.
-    */
+    private String isbn;
 
-    @Column
     private String author;
 
-    @Column
     private String title;
 
-    @Column
     private String description;
 
-    @Column
     private Float rating;
 
-    @Column
     private String publisher;
 
-    @Column
     private Long pageCount;
-
-    @Column(unique = true)
-    private String isbn;
 
 }

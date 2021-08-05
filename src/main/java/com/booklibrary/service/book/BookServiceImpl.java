@@ -48,7 +48,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public Book getBook(Long bookId) throws EntityNotFoundException {
+    public Book getBook(String bookId) throws EntityNotFoundException {
         Optional<Book> existingBook = bookRepository.findById(bookId);
         if (existingBook.isPresent()) {
             return existingBook.get();
@@ -57,7 +57,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public void deleteBook(Long bookId) throws EntityNotFoundException {
+    public void deleteBook(String bookId) throws EntityNotFoundException {
         Optional<Book> existingBook = bookRepository.findById(bookId);
         if (existingBook.isPresent()) {
             bookRepository.delete(existingBook.get());

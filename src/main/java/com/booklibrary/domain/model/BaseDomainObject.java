@@ -2,12 +2,8 @@ package com.booklibrary.domain.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
-import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
-import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -17,14 +13,11 @@ import java.util.Date;
  * - Last Edited date
  *
  */
-@MappedSuperclass
 @Data
 @NoArgsConstructor
 public abstract class BaseDomainObject implements Serializable {
 
-    @CreationTimestamp
-    protected Timestamp createTimestamp = new Timestamp(Calendar.getInstance().getTime().getTime());
+    protected Date createTimestamp = new Date(Calendar.getInstance().getTime().getTime());
 
-    @UpdateTimestamp
-    protected Timestamp lastUpdatedTimestamp;
+    protected Date lastUpdatedTimestamp = new Date(Calendar.getInstance().getTime().getTime());;
 }
